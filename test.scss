@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$bg-color: lightgray;
+
+body {
+    background-color: $bg-color;
+}
+
+%standard {
+    color: black;
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+
+.heading {
+    margin: 4rem;
+    
+    h1 {
+        @extend %standard;
+    }
+
+    .item {
+        @extend %standard;
+        text-transform: lowercase;
+    }
+}

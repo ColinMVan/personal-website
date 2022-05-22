@@ -1,17 +1,26 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-    height: 100vh;
-    width: 100vw;
-    background-color: skyblue;
+  background-color: lightgray;
 }
 
-h1 {
-    font-size: 3rem;
-    color: white;
-    text-transform: uppercase;
+.heading h1, .heading .item {
+  color: black;
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin-top: 2rem;
 }
+
+.heading {
+  margin: 4rem;
+}
+
+.heading .item {
+  text-transform: lowercase;
+}
+/*# sourceMappingURL=test.css.map */
