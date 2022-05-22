@@ -3,3 +3,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    background-image: url('//unsplash.it/100/100');
+    background-repeat: no-repeat;
+}
