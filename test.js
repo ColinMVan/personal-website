@@ -1,12 +1,19 @@
-const hamburger = document.querySelector(".hamburger");
-const links = document.querySelector(".links");
-const closeMenu = document.querySelector(".close-menu");
+const ingredients = document.querySelector("#ingredients");
+const recipes = document.querySelector("#recipes");
+const tabColor = getComputedStyle(document.documentElement).getPropertyValue(
+  "--tabColor"
+);
 
-hamburger.addEventListener("click", () => {
-  links.style.display = "flex";
-  links.style.top = "0";
-});
+ingredients.onclick = () => {
+  document.querySelector("#recipeContent").style.display = "none";
+  document.querySelector("#ingredientContent").style.display = "block";
+  recipes.style.border = "none";
+  ingredients.style.borderBottom = `4px solid ${tabColor}`;
+};
 
-closeMenu.addEventListener("click", () => {
-  links.style.top = "-100%";
-});
+recipes.onclick = () => {
+  document.querySelector("#recipeContent").style.display = "block";
+  document.querySelector("#ingredientContent").style.display = "none";
+  ingredients.style.border = "none";
+  recipes.style.borderBottom = `4px solid ${tabColor}`;
+};

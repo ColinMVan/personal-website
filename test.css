@@ -1,123 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Rubik:wght@400;500;700&display=swap");
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.nav-bar {
-  background-color: #383838;
-  display: -webkit-box;
-  display: -ms-flexbox;
+:root {
+  --tabColor: hsl(220, 100%, 70%);
+}
+
+body {
+  font-family: "Rubik", sans-serif;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin-bottom: 10rem;
+  flex-direction: column;
+  gap: 10rem;
+  align-items: center;
+  background-color: hsl(0deg, 0%, 90%);
 }
 
-.nav-bar .title {
-  color: white;
-  margin: 1.4rem;
+.overallTitle {
+  margin-top: 10rem;
+  font-size: 3rem;
+  color: var(--tabColor);
 }
 
-.nav-bar .hamburger {
-  position: absolute;
-  font-size: 2rem;
-  color: white;
-  top: 1.5rem;
-  right: 1rem;
-  height: 21px;
-  width: 30px;
-  display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+button {
+  border: none;
+  background-color: transparent;
+  color: black;
+  padding-bottom: 0.2em;
 }
-
-.nav-bar .hamburger:hover {
+button:hover {
   cursor: pointer;
 }
 
-.nav-bar .links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.recipeSection {
+  display: grid;
+  grid-template-columns: 20rem 5rem 5rem;
+  gap: 1rem;
+  grid-template-rows: 5rem 3rem 10rem 10rem;
+}
+.recipeSection .image,
+.recipeSection .content {
+  border: 2px solid black;
+  border-radius: 10px;
+}
+.recipeSection .title {
+  grid-column: span 3;
+  text-align: center;
+}
+.recipeSection .image {
+  grid-row: span 3;
+  background-image: url("//unsplash.it/320/400");
+  background-size: cover;
+}
+.recipeSection .content {
+  grid-column: span 2;
+  grid-row: span 2;
+  padding: 1em;
+  background-color: white;
+}
+.recipeSection .content #ingredientContent {
+  display: none;
+  text-align: center;
+}
+.recipeSection .content #ingredientContent ul {
   list-style: none;
-  -webkit-transition: top 300ms ease-in;
-  transition: top 300ms ease-in;
+  line-height: 2rem;
 }
-
-.nav-bar .links .close-menu {
-  color: white;
-  font-size: 2.5rem;
-  position: absolute;
-  display: none;
-  top: 1.5rem;
-  right: 1rem;
+.recipeSection #recipes {
+  border-bottom: 4px solid var(--tabColor);
 }
-
-.nav-bar .links .close-menu:hover {
-  cursor: pointer;
-}
-
-.nav-bar .links .link {
-  text-decoration: none;
-  color: white;
-  display: block;
-  padding: 2em 1em;
-  -webkit-transition: background-color 200ms ease-in;
-  transition: background-color 200ms ease-in;
-}
-
-.nav-bar .links .link:hover {
-  background-color: #4d4d4d;
-}
-
-@media (max-width: 550px) {
-  .nav-bar {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  .nav-bar .links {
-    display: none;
-    width: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    z-index: 100;
-    position: fixed;
-    height: 100vh;
-    top: -100vh;
-    background-color: #383838;
-    font-size: 2rem;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .nav-bar .links .link {
-    padding: 1em;
-    text-align: center;
-  }
-  .nav-bar .links .close-menu {
-    display: block;
-  }
-  .nav-bar .hamburger {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-/*# sourceMappingURL=test.css.map */
+.recipeSection button {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  transition: border-width 150ms ease-in;
+}/*# sourceMappingURL=test.css.map */
