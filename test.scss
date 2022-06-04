@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Rubik:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;800;900&display=swap");
 
 * {
   margin: 0;
@@ -6,85 +6,156 @@
   box-sizing: border-box;
 }
 
-:root {
-  --tabColor: hsl(220, 100%, 70%);
+html {
+  overflow-x: hidden;
 }
+
+@mixin iconHover {
+  cursor: pointer;
+  transform: scale(1.3);
+}
+
+@mixin listItem {
+  color: $dark;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+$light: hsl(0, 0, 90%);
+$dark: hsl(0, 0, 10%);
+$pop: hsl(230, 50%, 50%);
 
 body {
-  font-family: "Rubik", sans-serif;
-  display: flex;
+  font-family: "Poppins", sans-serif;
   margin-bottom: 10rem;
-  flex-direction: column;
-  gap: 10rem;
-  align-items: center;
-  background-color: hsl(0, 0%, 90%);
 }
 
-.overallTitle {
-  margin-top: 10rem;
-  font-size: 3rem;
-  color: var(--tabColor);
-}
-
-button {
-  border: none;
-  background-color: transparent;
-  color: black;
-  padding-bottom: 0.2em;
-
-  &:hover {
-    cursor: pointer;
+.backgroundStuff {
+  .slant {
+    background-color: hsla(230, 50%, 85%);
+    width: 100%;
+    padding: 3em;
+    position: absolute;
+    top: 40%;
+    transform: rotate(-50deg) scale(2);
+    z-index: -100;
   }
 }
 
-.recipeSection {
-  display: grid;
-  grid-template-columns: 20rem 5rem 5rem;
-  gap: 1rem;
-  grid-template-rows: 5rem 3rem 10rem 10rem;
+.navbar {
+  color: $dark;
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  font-size: clamp(1rem, 1vw, 1.2rem);
+  font-weight: 100;
 
-  .image,
-  .content {
-    border: 2px solid black;
-    border-radius: 10px;
-  }
+  .bars {
+    font-size: 1.5rem;
+    display: none;
+    transition: transform 200ms ease-in;
 
-  .title {
-    grid-column: span 3;
-    text-align: center;
-  }
-
-  .image {
-    grid-row: span 3;
-    background-image: url("//unsplash.it/320/400");
-    background-size: cover;
-  }
-
-  .content {
-    grid-column: span 2;
-    grid-row: span 2;
-    padding: 1em;
-    background-color: white;
-
-    #ingredientContent {
-      display: none;
-      text-align: center;
-
-      ul {
-        list-style: none;
-        line-height: 2rem;
-      }
+    &:hover {
+      @include iconHover();
     }
   }
 
-  #recipes {
-    border-bottom: 4px solid var(--tabColor);
+  h4 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
 
-  button {
+  .originalList {
+    list-style: none;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    transition: border-width 150ms ease-in;
+    gap: 3rem;
+
+    a {
+      @include listItem();
+
+      &:hover {
+        color: $pop;
+      }
+    }
+  }
+}
+
+.hiddenList {
+  position: fixed;
+  left: 100%;
+  top: 0;
+  background-color: $dark;
+  padding: 10em 4em;
+  text-align: center;
+  height: 100vh;
+  transition: left 300ms ease-in;
+
+  .closeButton {
+    color: $light;
+    font-size: 2rem;
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    transition: transform 200ms ease-in;
+
+    &:hover {
+      @include iconHover();
+    }
+  }
+
+  ul {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    flex-direction: column;
+  }
+
+  a {
+    @include listItem();
+    color: $light;
+
+    &:hover {
+      color: $pop;
+    }
+  }
+}
+
+.hero {
+  text-align: center;
+  padding: 7em 0;
+  font-size: clamp(1rem, 2vw, 2.3rem);
+  letter-spacing: 3px;
+}
+
+.mainContent {
+  text-align: center;
+  margin-top: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9rem;
+
+  .box {
+    width: 45ch;
+
+    h1 {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    .originalList {
+      display: none;
+    }
+
+    .bars {
+      display: block;
+    }
+  }
+
+  .mainContent .box {
+    width: 30ch;
   }
 }
