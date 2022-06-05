@@ -19,6 +19,20 @@ html {
   color: $dark;
   text-decoration: none;
   font-weight: 300;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 0%;
+    background-color: $dark;
+    height: 2px;
+    position: relative;
+    transition: width 250ms ease-in;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
 }
 
 $light: hsl(0, 0, 90%);
@@ -72,10 +86,6 @@ body {
 
     a {
       @include listItem();
-
-      &:hover {
-        color: $pop;
-      }
     }
   }
 }
@@ -114,8 +124,8 @@ body {
     @include listItem();
     color: $light;
 
-    &:hover {
-      color: $pop;
+    &::after {
+      background-color: $light;
     }
   }
 }

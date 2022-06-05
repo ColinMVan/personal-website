@@ -55,8 +55,17 @@ body {
   text-decoration: none;
   font-weight: 300;
 }
-.navbar .originalList a:hover {
-  color: hsl(230deg, 50%, 50%);
+.navbar .originalList a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  background-color: hsl(0deg, 0%, 10%);
+  height: 2px;
+  position: relative;
+  transition: width 250ms ease-in;
+}
+.navbar .originalList a:hover::after {
+  width: 100%;
 }
 
 .hiddenList {
@@ -93,8 +102,20 @@ body {
   font-weight: 300;
   color: hsl(0deg, 0%, 90%);
 }
-.hiddenList a:hover {
-  color: hsl(230deg, 50%, 50%);
+.hiddenList a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  background-color: hsl(0deg, 0%, 10%);
+  height: 2px;
+  position: relative;
+  transition: width 250ms ease-in;
+}
+.hiddenList a:hover::after {
+  width: 100%;
+}
+.hiddenList a::after {
+  background-color: hsl(0deg, 0%, 90%);
 }
 
 .hero {
