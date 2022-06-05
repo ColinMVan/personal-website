@@ -146,7 +146,7 @@ body {
   gap: 9rem;
 
   .box {
-    width: 45ch;
+    width: clamp(30ch, 40vw, 50ch);
 
     h1 {
       margin-bottom: 2rem;
@@ -163,9 +163,5 @@ body {
     .bars {
       display: block;
     }
-  }
-
-  .mainContent .box {
-    width: 30ch;
   }
 }
