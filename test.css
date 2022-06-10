@@ -12,7 +12,7 @@ html {
 
 body {
   background-image: url("grayGeometric.jpg");
-  background-color: hsla(0deg, 0%, 10%, 0.6);
+  background-color: hsla(0deg, 0%, 10%, 0.1);
   background-size: cover;
   background-blend-mode: soft-light;
   background-position: center;
@@ -21,7 +21,7 @@ body {
 }
 
 .navbar {
-  color: hsl(0deg, 0%, 95%);
+  color: hsl(0deg, 0%, 15%);
   display: flex;
   justify-content: space-between;
   padding: 2em;
@@ -47,7 +47,7 @@ body {
   gap: 3rem;
 }
 .navbar .originalList a {
-  color: hsl(0deg, 0%, 95%);
+  color: hsl(0deg, 0%, 15%);
   text-decoration: none;
   font-weight: 300;
 }
@@ -55,7 +55,7 @@ body {
   content: "";
   display: block;
   width: 0%;
-  background-color: hsl(0deg, 0%, 95%);
+  background-color: hsl(0deg, 0%, 15%);
   height: 2px;
   position: relative;
   transition: width 250ms ease-in;
@@ -68,7 +68,7 @@ body {
   position: fixed;
   left: 100%;
   top: 0;
-  background-color: hsl(0deg, 0%, 95%);
+  background-color: hsl(0deg, 0%, 15%);
   padding: 10em 4em;
   text-align: center;
   height: 100vh;
@@ -94,7 +94,7 @@ body {
   flex-direction: column;
 }
 .hiddenList a {
-  color: hsl(0deg, 0%, 95%);
+  color: hsl(0deg, 0%, 15%);
   text-decoration: none;
   font-weight: 300;
   color: hsl(0deg, 0%, 10%);
@@ -103,7 +103,7 @@ body {
   content: "";
   display: block;
   width: 0%;
-  background-color: hsl(0deg, 0%, 95%);
+  background-color: hsl(0deg, 0%, 15%);
   height: 2px;
   position: relative;
   transition: width 250ms ease-in;
@@ -120,7 +120,7 @@ body {
   padding: 7em 0.3em;
   font-size: clamp(1.3rem, 2vw, 2.3rem);
   letter-spacing: 3px;
-  color: hsl(0deg, 0%, 95%);
+  color: hsl(0deg, 0%, 15%);
 }
 
 .mainContent {
@@ -130,7 +130,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 9rem;
-  color: hsl(0deg, 0%, 95%);
+  color: hsl(0deg, 0%, 15%);
 }
 .mainContent .box {
   width: clamp(30ch, 40vw, 50ch);
