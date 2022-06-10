@@ -17,7 +17,7 @@ body {
   background-blend-mode: soft-light;
   background-position: center;
   margin-bottom: 10rem;
-  text-shadow: 0.5px 0.5px 1px black;
+  text-shadow: 0.5px 0.5px 1px white;
 }
 
 .navbar {
@@ -76,7 +76,7 @@ body {
   text-shadow: none;
 }
 .hiddenList .closeButton {
-  color: hsl(0deg, 0%, 10%);
+  color: hsl(0deg, 0%, 90%);
   font-size: 2rem;
   position: absolute;
   top: 32px;
@@ -97,7 +97,7 @@ body {
   color: hsl(0deg, 0%, 15%);
   text-decoration: none;
   font-weight: 300;
-  color: hsl(0deg, 0%, 10%);
+  color: hsl(0deg, 0%, 90%);
 }
 .hiddenList a::after {
   content: "";
@@ -112,7 +112,7 @@ body {
   width: 100%;
 }
 .hiddenList a::after {
-  background-color: hsl(0deg, 0%, 10%);
+  background-color: hsl(0deg, 0%, 90%);
 }
 
 .hero {
